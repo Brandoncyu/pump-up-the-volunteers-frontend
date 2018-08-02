@@ -1,0 +1,17 @@
+body {
+  background: url('../assets/backgrounds/main-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+#button-box {
+  background-color: white;
+  border-style: solid;
+  border-radius: 25px;
+}
+
+#click-buttons {
+  margin-bottom: 20px;
+}
