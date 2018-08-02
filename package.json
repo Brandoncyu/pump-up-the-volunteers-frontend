@@ -5,13 +5,11 @@
   "main": "index.js",
   "scripts": {
     "dev-server": "live-server .",
-    "build-index": "browserify scripts_index/main.js -o bundle.js",
-    "watch-index": "watchify scripts_index/main.js -o bundle.js",
     "build-org": "browserify scripts_org/main.js -o bundleorg.js",
     "watch-org": "watchify scripts_org/main.js -o bundleorg.js",
     "build-vol": "browserify scripts_vol/main.js -o bundlevol.js",
     "watch-vol": "watchify scripts_vol/main.js -o bundlevol.js",
-    "dev": "run-all \"npm run watch-index\" \"npm run watch-org\" \"npm run watch-vol\" \"npm run dev-server\""
+    "dev": "run-all \"npm run watch-org\" \"npm run watch-vol\" \"npm run dev-server\""
   },
   "keywords": [],
   "author": "",
