@@ -1,0 +1,17 @@
+.card {
+  min-width: 350px;
+  max-width: 350px;
+  min-height: 400px;
+  max-height: 400px;
+  margin-right: 20px
+}
+
+.scrolling-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  width: 1000px;
+  height: 400px;
+  .card {
+    display: inline-block;
+  }
+}
