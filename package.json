@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev-server": "live-server .",
-    "build-org": "browserify scripts_org/main.js -o bundleorg.js",
-    "watch-org": "watchify scripts_org/main.js -o bundleorg.js",
-    "build-vol": "browserify scripts_vol/main.js -o bundlevol.js",
-    "watch-vol": "watchify scripts_vol/main.js -o bundlevol.js",
+    "build-org": "browserify scripts/org/main.js -o bundleorg.js",
+    "watch-org": "watchify scripts/org/main.js -o bundleorg.js",
+    "build-vol": "browserify scripts/vol/main.js -o bundlevol.js",
+    "watch-vol": "watchify scripts/vol/main.js -o bundlevol.js",
     "dev": "run-all \"npm run watch-org\" \"npm run watch-vol\" \"npm run dev-server\""
   },
   "keywords": [],
