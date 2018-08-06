@@ -163,44 +163,44 @@ const registerTemplate = () => {
                                                 <fieldset>
                                                   <legend>Days I Can Volunteer</legend>
                                                   <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" name="1" id="1" value="1">
-                                                      <label class="form-check-label" for="1">
+                                                    <input class="form-check-input" type="checkbox" name="Sunday" id="Sunday" value="Sunday">
+                                                      <label class="form-check-label" for="Sunday">
                                                         Sunday
                                                       </label>
                                                     </div>
                                                     <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" name="2" id="2" value="2">
-                                                        <label class="form-check-label" for="2">
+                                                      <input class="form-check-input" type="checkbox" name="Monday" id="Monday" value="Monday">
+                                                        <label class="form-check-label" for="Monday">
                                                           Monday
                                                         </label>
                                                       </div>
                                                       <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" name="3" id="3" value="3">
-                                                          <label class="form-check-label" for="3">
+                                                        <input class="form-check-input" type="checkbox" name="Tuesday" id="Tuesday" value="Tuesday">
+                                                          <label class="form-check-label" for="Tuesday">
                                                             Tuesday
                                                           </label>
                                                         </div>
                                                         <div class="form-check">
-                                                          <input class="form-check-input" type="checkbox" name="4" id="4" value="4">
-                                                            <label class="form-check-label" for="4">
+                                                          <input class="form-check-input" type="checkbox" name="Wednesday" id="Wednesday" value="Wednesday">
+                                                            <label class="form-check-label" for="Wednesday">
                                                               Wednesday
                                                             </label>
                                                           </div>
                                                           <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="5" id="5" value="5">
-                                                              <label class="form-check-label" for="5">
+                                                            <input class="form-check-input" type="checkbox" name="Thursday" id="Thursday" value="Thursday">
+                                                              <label class="form-check-label" for="Thursday">
                                                                 Thursday
                                                               </label>
                                                             </div>
                                                             <div class="form-check">
-                                                              <input class="form-check-input" type="checkbox" name="6" id="6" value="6">
-                                                                <label class="form-check-label" for="6">
+                                                              <input class="form-check-input" type="checkbox" name="Friday" id="Friday" value="Friday">
+                                                                <label class="form-check-label" for="Friday">
                                                                   Friday
                                                                 </label>
                                                               </div>
                                                               <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" name="7" id="7" value="7">
-                                                                  <label class="form-check-label" for="7">
+                                                                <input class="form-check-input" type="checkbox" name="Saturday" id="Saturday" value="Saturday">
+                                                                  <label class="form-check-label" for="Saturday">
                                                                     Saturday
                                                                   </label>
                                                                 </div>
