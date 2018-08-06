@@ -98,62 +98,62 @@ const registerTemplate = () => {
                             <fieldset>
                               <legend>Choose your interests</legend>
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="A" id="A" value="A">
-                                  <label class="form-check-label" for="A">
+                                <input class="form-check-input" type="checkbox" name="1" id="1" value="1">
+                                  <label class="form-check-label" for="1">
                                     Arts, Culture and Humanities
                                   </label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="B" id="B" value="B">
-                                    <label class="form-check-label" for="B">
+                                  <input class="form-check-input" type="checkbox" name="2" id="2" value="2">
+                                    <label class="form-check-label" for="2">
                                       Educational Institutions and Related Activities
                                     </label>
                                   </div>
                                   <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="C" id="C" value="C">
-                                      <label class="form-check-label" for="C">
+                                    <input class="form-check-input" type="checkbox" name="3" id="3" value="3">
+                                      <label class="form-check-label" for="3">
                                         Environmental Quality, Protection and Beautification
                                       </label>
                                     </div>
                                     <div class="form-check">
-                                      <input class="form-check-input" type="checkbox" name="D" id="D" value="D">
-                                        <label class="form-check-label" for="D">
+                                      <input class="form-check-input" type="checkbox" name="4" id="4" value="4">
+                                        <label class="form-check-label" for="4">
                                           Animal-Related
                                         </label>
                                       </div>
                                       <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" name="N" id="N" value="N">
-                                          <label class="form-check-label" for="N">
+                                        <input class="form-check-input" type="checkbox" name="5" id="5" value="5">
+                                          <label class="form-check-label" for="5">
                                             Recreation, Sports, Leisure, Athletics
                                           </label>
                                         </div>
                                         <div class="form-check">
-                                          <input class="form-check-input" type="checkbox" name="O" id="O" value="O">
-                                            <label class="form-check-label" for="O">
+                                          <input class="form-check-input" type="checkbox" name="6" id="6" value="6">
+                                            <label class="form-check-label" for="6">
                                               Youth Development
                                             </label>
                                           </div>
                                           <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="R" id="R" value="R">
-                                              <label class="form-check-label" for="R">
+                                            <input class="form-check-input" type="checkbox" name="7" id="7" value="7">
+                                              <label class="form-check-label" for="7">
                                                 Civil Rights, Social Action, Advocacy
                                               </label>
                                             </div>
                                             <div class="form-check">
-                                              <input class="form-check-input" type="checkbox" name="S" id="S" value="S">
-                                                <label class="form-check-label" for="S">
+                                              <input class="form-check-input" type="checkbox" name="8" id="8" value="8">
+                                                <label class="form-check-label" for="8">
                                                   Community Improvement, Capacity Building
                                                 </label>
                                               </div>
                                               <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="U" id="U" value="U">
-                                                  <label class="form-check-label" for="U">
+                                                <input class="form-check-input" type="checkbox" name="9" id="9" value="9">
+                                                  <label class="form-check-label" for="9">
                                                     Science and Technology Research Institutes, Services
                                                   </label>
                                                 </div>
                                                 <div class="form-check">
-                                                  <input class="form-check-input" type="checkbox" name="X" id="X" value="X">
-                                                    <label class="form-check-label" for="X">
+                                                  <input class="form-check-input" type="checkbox" name="10" id="10" value="10">
+                                                    <label class="form-check-label" for="10">
                                                       Religion-Related, Spiritual Development
                                                     </label>
                                                   </div>
@@ -169,37 +169,37 @@ const registerTemplate = () => {
                                                       </label>
                                                     </div>
                                                     <div class="form-check">
-                                                      <input class="form-check-input" type="checkbox" name="Monday" id="Monday" value="Monday">
+                                                      <input class="form-check-input" type="checkbox" name="Monday" id="Monday" value="true">
                                                         <label class="form-check-label" for="Monday">
                                                           Monday
                                                         </label>
                                                       </div>
                                                       <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" name="Tuesday" id="Tuesday" value="Tuesday">
+                                                        <input class="form-check-input" type="checkbox" name="Tuesday" id="Tuesday" value="true">
                                                           <label class="form-check-label" for="Tuesday">
                                                             Tuesday
                                                           </label>
                                                         </div>
                                                         <div class="form-check">
-                                                          <input class="form-check-input" type="checkbox" name="Wednesday" id="Wednesday" value="Wednesday">
+                                                          <input class="form-check-input" type="checkbox" name="Wednesday" id="Wednesday" value="true">
                                                             <label class="form-check-label" for="Wednesday">
                                                               Wednesday
                                                             </label>
                                                           </div>
                                                           <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" name="Thursday" id="Thursday" value="Thursday">
+                                                            <input class="form-check-input" type="checkbox" name="Thursday" id="Thursday" value="true">
                                                               <label class="form-check-label" for="Thursday">
                                                                 Thursday
                                                               </label>
                                                             </div>
                                                             <div class="form-check">
-                                                              <input class="form-check-input" type="checkbox" name="Friday" id="Friday" value="Friday">
+                                                              <input class="form-check-input" type="checkbox" name="Friday" id="Friday" value="true">
                                                                 <label class="form-check-label" for="Friday">
                                                                   Friday
                                                                 </label>
                                                               </div>
                                                               <div class="form-check">
-                                                                <input class="form-check-input" type="checkbox" name="Saturday" id="Saturday" value="Saturday">
+                                                                <input class="form-check-input" type="checkbox" name="Saturday" id="Saturday" value="true">
                                                                   <label class="form-check-label" for="Saturday">
                                                                     Saturday
                                                                   </label>
