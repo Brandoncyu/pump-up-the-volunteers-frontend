@@ -1,7 +1,6 @@
 function renderError(error) {
-  document.getElementById('login-email').value = ''
-  document.getElementById('login-password').value = ''
-
+  // document.getElementById('login-email').value = ''
+// document.getElementById('login-password').value = ''
   const loginError = document.getElementById('login-alert')
 
   loginError.innerHTML = 'Username or Password Not Valid. Please Try Again.'
