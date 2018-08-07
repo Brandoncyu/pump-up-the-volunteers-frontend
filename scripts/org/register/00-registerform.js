@@ -1,5 +1,5 @@
 const registerTemplate = require('../templates/registerTemplate')
-const verify = require('./01-registerverification')
+const verify = require('./01-registerVerification')
 
 function registerForm() {
   document.getElementById('form-container').innerHTML = registerTemplate()
