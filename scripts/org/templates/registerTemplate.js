@@ -17,6 +17,9 @@ const registerTemplate = () => {
     <div class="form-group">
       <label for="register-ein">Your Organization's EIN Number</label><br>
       <input class="form-control" type="number" id="register-ein" placeholder="Please enter your organiation's EIN number" required="required">
+      <small id="register-ein-text" class="form-text text-muted">
+      Only numbers are necessary. No dashes required.
+      </small>
     </div>
     <div class="form-group">
       <label for="register-logo">A Link to Your Organization's Logo</label><br>
