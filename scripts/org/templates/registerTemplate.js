@@ -27,7 +27,8 @@ const registerTemplate = () => {
       <textarea id="register-description" name="register-description" type="text" class="form-control" rows="3" maxlength='255' placeholder="Enter your organization's description" required="required"></textarea>
     </div>
     <button class="btn btn-success" type="submit">Submit</button>
-  </form>`
+  </form>
+  <span id="register-alert" style="color:red;"></span>`
 }
 
 module.exports = registerTemplate
