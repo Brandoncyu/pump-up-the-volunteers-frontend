@@ -9,8 +9,6 @@ function verify(event) {
 
   request.login(email, password).then(response => {
     const token = localStorage.setItem('token_org', response.data.token)
-    document.getElementById('login-email').value = ''
-    document.getElementById('login-password').value = ''
 
     loginMode()
   }).catch(error => {

@@ -11,7 +11,8 @@ const loginTemplate = () => {
       <input class="form-control" type="password" id="login-password" placeholder="Please enter your password" required="required">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-  </form>`
+  </form>
+  <span id="login-alert" style="color:red;"></span>`
 }
 
 module.exports = loginTemplate
