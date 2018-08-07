@@ -201,7 +201,8 @@ const registerTemplate = () => {
                                             </fieldset>
                                             <br>
                                               <button type="submit" class="btn btn-primary">Submit</button>
-                                            </form>`
+                                            </form>
+                                            <span id="register-alert" style="color:red;"></span>`
 }
 
 module.exports = registerTemplate

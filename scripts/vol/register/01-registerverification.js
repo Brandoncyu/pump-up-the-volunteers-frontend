@@ -1,4 +1,6 @@
 const request = require('../request/request')
+const loginMode = require('../modes/loginMode')
+const renderError = require('./02-registerError')
 
 function verify(event) {
   event.preventDefault()
@@ -33,7 +35,13 @@ function verify(event) {
     }
   }
 
-  request.signup(firstName, lastName, email, password, address1, city, state, zip, days, interests)
+  request.signup(firstName, lastName, email, password, address1, city, state, zip, days, interests).then(response => {
+    const token = localStorage.setItem('token_vol', response.data.token)
+
+    loginMode()
+  }).catch(error => {
+    renderError(error)
+  })
 }
 
 module.exports = verify
