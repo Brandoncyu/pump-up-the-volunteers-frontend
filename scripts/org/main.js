@@ -1,4 +1,4 @@
-const loginForm = require('./login/00-loginform')
+const loginForm = require('./login/00-loginForm')
 const registerForm = require('./register/00-registerForm')
 const logoutMode = require('./modes/logoutMode')
 const verify = require('./login/01-loginVerification')

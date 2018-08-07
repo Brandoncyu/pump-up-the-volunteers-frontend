@@ -6,7 +6,7 @@ function verify(event) {
   event.preventDefault()
   const firstName = document.getElementById('first-name').value
   const lastName = document.getElementById('last-name').value
-  const email = document.getElementById('email').value
+  const email = document.getElementById('email').value.toLowerCase()
   const password = document.getElementById('password').value
   const address1 = document.getElementById('address1').value
   const city = document.getElementById('city').value
