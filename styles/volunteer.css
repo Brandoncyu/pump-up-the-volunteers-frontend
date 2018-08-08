@@ -1,22 +1,37 @@
 .card {
-  min-width: 350px;
-  max-width: 350px;
-  min-height: 400px;
-  max-height: 400px;
+  min-width: 300px;
+  max-width: 300px;
+  min-height: 450px;
+  max-height: 450px;
   margin-right: 20px
 }
 
 .scrolling-wrapper {
   overflow-x: scroll;
   overflow-y: hidden;
-  width: 1000px;
-  height: 400px;
+  width: 900px;
+  height: 450px;
   .card {
     display: inline-block;
   }
 }
 
+.card-top {
+  margin-left: auto;
+  margin-right: auto;
+  height: 167px;
+  width: 298px
+}
+
+.card-image {
+  max-height: 167px;
+}
+
 .card-body {
   overflow-y: scroll;
-  height: 212px;
+  height: 213px;
+}
+
+.card-footer {
+  height: 70px
 }
