@@ -23,8 +23,27 @@ function allEvents(id) {
   })
 }
 
+function postEvents(id, title, description, date, street, city, state, zip) {
+  return axios(`${baseURL}/api/organizations/${id}/events`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token_org')}`
+    },
+    data: {
+      title,
+      description,
+      date,
+      street,
+      city,
+      state,
+      zip
+    }
+  })
+}
+
 module.exports = {
   signup,
   login,
+  postEvents,
   allEvents
 }

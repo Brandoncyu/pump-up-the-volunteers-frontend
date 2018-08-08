@@ -36,11 +36,11 @@
           <form id="login-form">
             <div class="form-group">
               <label for="login-email">Email Address</label><br>
-              <input class="form-control" type="email" id="login-email" placeholder="Please enter your email" required="required" value="info@mopop.org">
+              <input class="form-control" type="email" id="login-email" placeholder="Please enter your email" required="required">
             </div>
             <div class="form-group">
               <label for="login-password">Password</label><br>
-              <input class="form-control" type="password" id="login-password" placeholder="Please enter your password" required="required" value="password">
+              <input class="form-control" type="password" id="login-password" placeholder="Please enter your password" required="required">
             </div>
             <button type="submit" class="btn btn-success">Submit</button>
           </form>
@@ -52,7 +52,7 @@
       <div class="row">
         <!-- Event Form -->
         <div class="col-3" id="create-event">
-          <form>
+          <form id="post-event">
             <h2 class="text-center mb-4">Create a New Event!</h2>
             <div class="form-group">
               <label for="event-name">Event Name</label>
@@ -136,8 +136,11 @@
             </div>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="addressCheck">
-              <label class="custom-control-label" for="addressCheck">The event is taking place at my organization</label>
+              <label class="custom-control-label" for="addressCheck">
+                <small>The event is taking place at my organization</small>
+              </label>
             </div>
+            <br>
             <button type="submit" class="btn btn-success btn-lg btn-block" id="event-post">Post Your Event</button>
           </form>
         </div>

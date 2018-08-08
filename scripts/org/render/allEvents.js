@@ -6,7 +6,6 @@ function allEvents() {
 
   request.allEvents(infoOrg.id).then(response => {
     const events = response.data.events
-    console.log(events)
     events.sort((a, b) => {
       if (new Date(a.date) > new Date(b.date)) {
         return 1
@@ -21,10 +20,11 @@ function allEvents() {
 
     const today = new Date()
     events.forEach(element => {
-      if (today < new Date(element.date)) {
-        pastEvents.push(element)
-      } else {
+      if (today <= new Date(element.date)) {
         upcomingEvents.push(element)
+
+      } else {
+        pastEvents.push(element)
       }
     })
     let upcomingAccumulator = ''
