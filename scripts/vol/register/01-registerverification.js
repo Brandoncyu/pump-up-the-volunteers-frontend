@@ -37,6 +37,11 @@ function verify(event) {
 
   request.signup(firstName, lastName, email, password, address1, city, state, zip, days, interests).then(response => {
     const token = localStorage.setItem('token_vol', response.data.token)
+    const info = {
+      days: response.data.days,
+      interests: response.data.interests
+    }
+    localStorage.setItem('info_vol', JSON.stringify(info))
 
     loginMode()
   }).catch(error => {
