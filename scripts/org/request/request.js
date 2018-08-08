@@ -15,7 +15,16 @@ function signup(email, password, name, ein, logo, description) {
   })
 }
 
+function allEvents(id) {
+  return axios.get(`${baseURL}/api/organizations/${id}/events`, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token_org')}`
+    }
+  })
+}
+
 module.exports = {
   signup,
-  login
+  login,
+  allEvents
 }
