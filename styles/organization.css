@@ -16,6 +16,16 @@
   }
 }
 
+.card-image {
+  height: 167px;
+  width: auto;
+}
+
+.card-top {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card-body {
   overflow-y: scroll;
   height: 212px;

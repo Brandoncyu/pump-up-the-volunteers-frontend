@@ -1,6 +1,8 @@
 const cardOrgTemplate = (id, logo, name, date, description, street, city, state, zip) => {
   return `<div class="card" eventId="${id}">
+    <div class="card-top">
     <img class="card-img-top card-image" src="${logo}" alt="Card image cap">
+    </div>
     <div class="card-body">
       <h5 class="card-title">${name}</h5>
       <p class="card-text date">

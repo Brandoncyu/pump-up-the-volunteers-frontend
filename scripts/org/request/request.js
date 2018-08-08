@@ -23,8 +23,8 @@ function allEvents(id) {
   })
 }
 
-function postEvents(id, title, description, date, street, city, state, zip) {
-  return axios(`${baseURL}/api/organizations/${id}/events`, {
+function postEvents(org_id, title, description, date, street, city, state, zip) {
+  return axios(`${baseURL}/api/organizations/${org_id}/events`, {
     method: 'POST',
     headers: {
       'Authorization': `Bearer ${localStorage.getItem('token_org')}`
@@ -36,7 +36,8 @@ function postEvents(id, title, description, date, street, city, state, zip) {
       street,
       city,
       state,
-      zip
+      zip,
+      org_id
     }
   })
 }
