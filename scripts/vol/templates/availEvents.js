@@ -18,8 +18,8 @@ const availEvents = (eventid, volid, logo, title, org, date, description, street
     </p>
   </div>
   <div class="card-footer text-muted d-flex justify-content-between">
-    <button type="button" class="btn btn-sm btn-outline-primary" class="interested">I'm Interested</button>
-    <button type="button" class="btn btn-sm btn-outline-primary" class="not-interested">Not Interested</button>
+    <button type="button" class="btn btn-sm btn-outline-primary interested" eventid="${eventid}" volid="${volid}">I'm Interested</button>
+    <button type="button" class="btn btn-sm btn-outline-primary not-interested" eventid="${eventid}" volid="${volid}">Not Interested</button>
   </div>
 </div>`
 
