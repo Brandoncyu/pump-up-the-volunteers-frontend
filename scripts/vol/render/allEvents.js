@@ -1,5 +1,7 @@
 const request = require('../request/request')
 const availEvents = require('../templates/availEvents')
+const interested = require('../buttons/interested')
+const notInterested = require('../buttons/notInterested')
 
 function allEvents(){
   const infoOrg = JSON.parse(localStorage.getItem('info_vol'))
@@ -22,7 +24,18 @@ function allEvents(){
       availableAccumulator += availEvents(element.id, id, element.logo, element.title, element.name, element.date, element.description, element.street, element.city, element.state, element.zip)
     })
     document.getElementById('available-events').innerHTML = availableAccumulator
-    console.log('response', response.data)
+    const interestedButtons = document.querySelectorAll('.interested')
+
+    interestedButtons.forEach(element => {
+      element.addEventListener('click', interested(element))
+    })
+
+    const notInterestedButtons = document.querySelectorAll('.not-interested')
+
+    notInterestedButtons.forEach(element => {
+      element.addEventListener('click', notInterested(element))
+    })
+
   }).catch(error => {
     console.log(error)
   })
