@@ -1,7 +1,7 @@
 const request = require('../request/request')
 const loginMode = require('../modes/loginMode')
 const renderError = require('./02-registerError')
-const allEvents = require('../render/allEvents')
+const registeredEvents = require('../render/registeredEvents')
 
 function verify(event) {
   event.preventDefault()
@@ -61,7 +61,7 @@ function verify(event) {
     if (daysParse[6] == true) {
       daysArray.push('Saturday')
     }
-
+    console.log(response.data)
     const info = {
       id: response.data.id,
       days: daysArray,
@@ -70,7 +70,7 @@ function verify(event) {
     localStorage.setItem('info_vol', JSON.stringify(info))
 
     loginMode()
-    allEvents()
+    registeredEvents()
   }).catch(error => {
     renderError(error)
   })
