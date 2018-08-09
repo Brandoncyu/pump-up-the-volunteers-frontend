@@ -19,7 +19,18 @@ function signup(firstName, lastName, email, password, address1, city, state, zip
   })
 }
 
+function eventLoad(days, interests, id) {
+  let newDays = JSON.stringify(days)
+  let newInterests = JSON.stringify(interests)
+  return axios.get(`${baseURL}/api/volunteers/${id}/events?interests=${newInterests}&days=${newDays}`, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token_vol')}`
+    }
+  })
+}
+
 module.exports = {
   signup,
-  login
+  login,
+  eventLoad
 }
