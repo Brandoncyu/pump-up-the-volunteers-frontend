@@ -1,6 +1,7 @@
 const request = require('../request/request')
 const renderError = require('./02-loginError')
 const loginMode = require('../modes/loginMode')
+const allEvents = require('../render/allEvents')
 
 function verify(event) {
   event.preventDefault()
@@ -40,15 +41,8 @@ function verify(event) {
     localStorage.setItem('info_vol', JSON.stringify(info))
 
     loginMode()
-    const infoOrg = JSON.parse(localStorage.getItem('info_vol'))
-    const days = infoOrg.days
-    const interests = infoOrg.interests
-    const id = infoOrg.id
-    request.eventLoad(days, interests, id).then(response => {
-      console.log('response', response)
-    }).catch(error => {
-      console.log(error)
-    })
+    allEvents()
+
 
   }).catch(error => {
     renderError(error)

@@ -1,6 +1,7 @@
 const request = require('../request/request')
 const loginMode = require('../modes/loginMode')
 const renderError = require('./02-registerError')
+const allEvents = require('../render/allEvents')
 
 function verify(event) {
   event.preventDefault()
@@ -37,13 +38,39 @@ function verify(event) {
 
   request.signup(firstName, lastName, email, password, address1, city, state, zip, days, interests).then(response => {
     const token = localStorage.setItem('token_vol', response.data.token)
+    const daysParse = response.data.days
+    const daysArray = []
+    if (daysParse[0] == true) {
+      daysArray.push('Sunday')
+    }
+    if (daysParse[1] == true) {
+      daysArray.push('Monday')
+    }
+    if (daysParse[2] == true) {
+      daysArray.push('Tuesday')
+    }
+    if (daysParse[3] == true) {
+      daysArray.push('Wednesday')
+    }
+    if (daysParse[4] == true) {
+      daysArray.push('Thursday')
+    }
+    if (daysParse[5] == true) {
+      daysArray.push('Friday')
+    }
+    if (daysParse[6] == true) {
+      daysArray.push('Saturday')
+    }
+
     const info = {
-      days: response.data.days,
+      id: response.data.id,
+      days: daysArray,
       interests: response.data.interests
     }
     localStorage.setItem('info_vol', JSON.stringify(info))
 
     loginMode()
+    allEvents()
   }).catch(error => {
     renderError(error)
   })
