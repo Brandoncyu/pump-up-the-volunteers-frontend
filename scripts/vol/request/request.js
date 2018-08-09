@@ -29,8 +29,32 @@ function eventLoad(days, interests, id) {
   })
 }
 
+function createFavorite(eventId, volId, status){
+  return axios(`${baseURL}/api/volunteers/${volId}/events`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token_vol')}`
+    },
+    data: {
+      volId: volId,
+      status,
+      eventId: eventId
+    }
+  })
+}
+
+function signedUp(volId){
+  return axios.get(`${baseURL}/api/volunteers/${volId}/events/${volId}`, {
+    headers: {
+      'Authorization': `Bearer ${localStorage.getItem('token_vol')}`
+    }
+  })
+}
+
 module.exports = {
   signup,
   login,
-  eventLoad
+  eventLoad,
+  createFavorite,
+  signedUp
 }
