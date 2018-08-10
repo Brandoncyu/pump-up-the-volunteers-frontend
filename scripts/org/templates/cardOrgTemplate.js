@@ -5,9 +5,9 @@ const cardOrgTemplate = (id, logo, name, date, description, street, city, state,
     </div>
     <div class="card-body">
       <h5 class="card-title">${name}</h5>
-      <p class="card-text date">
-        <small class ="date">${date}</small>
-      </p>
+      <h6 class="card-text card-date">
+        ${date}
+      </h6>
       <p class="card-text description">${description}
       </p>
       <p class="card-text address"><strong>Address:</strong> ${street}<br>${city}, ${state} ${zip}

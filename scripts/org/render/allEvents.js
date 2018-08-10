@@ -1,5 +1,6 @@
 const request = require('../request/request')
 const cardOrgTemplate = require('../templates/cardOrgTemplate')
+const moment = require('moment')
 
 function allEvents() {
   const infoOrg = JSON.parse(localStorage.getItem('info_org'))
@@ -29,13 +30,13 @@ function allEvents() {
     })
     let upcomingAccumulator = ''
 
-    upcomingEvents.forEach(element => upcomingAccumulator += cardOrgTemplate(element.id, infoOrg.logo, element.title, new Date(element.date), element.description, element.street, element.city, element.state, element.zip))
+    upcomingEvents.forEach(element => upcomingAccumulator += cardOrgTemplate(element.id, infoOrg.logo, element.title, moment(new Date(element.date)).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip))
 
     document.getElementById('upcoming-events').innerHTML = upcomingAccumulator
 
     let pastAccumulator = ''
 
-    pastEvents.forEach(element => pastAccumulator += cardOrgTemplate(element.id, infoOrg.logo, element.title, element.date, element.description, element.street, element.city, element.state, element.zip))
+    pastEvents.forEach(element => pastAccumulator += cardOrgTemplate(element.id, infoOrg.logo, element.title, moment(new Date(element.date)).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip))
 
     document.getElementById('past-events').innerHTML = pastAccumulator
   }).catch(error => {

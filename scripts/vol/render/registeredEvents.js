@@ -2,7 +2,7 @@ const request = require('../request/request')
 const availEvents = require('../templates/availEvents')
 const interested = require('../buttons/interested')
 const notInterested = require('../buttons/notInterested')
-
+const moment = require('moment')
 
 function registeredEvents(){
   const infoOrg = JSON.parse(localStorage.getItem('info_vol'))
@@ -25,7 +25,7 @@ function registeredEvents(){
     })
     const newId = JSON.parse(localStorage.getItem('info_vol')).id
     events.forEach(element => {
-      availableAccumulator += availEvents(element.id, newId, element.logo, element.title, element.name, element.date, element.description, element.street, element.city, element.state, element.zip)
+      availableAccumulator += availEvents(element.id, newId, element.logo, element.title, element.name, moment(element.date).format('MMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip)
     })
 
     document.getElementById('available-events').innerHTML = availableAccumulator

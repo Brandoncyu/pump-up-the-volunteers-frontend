@@ -3,6 +3,7 @@ const availEvents = require('../templates/availEvents')
 const rsvpEvents = require('../templates/rsvpEvents')
 const interested = require('../buttons/interested')
 const notInterested = require('../buttons/notInterested')
+const moment = require('moment')
 
 function allEvents(){
   const infoOrg = JSON.parse(localStorage.getItem('info_vol'))
@@ -41,7 +42,7 @@ function allEvents(){
       })
 
       noRSVP.forEach(element => {
-        availableAccumulator += availEvents(element.id, id, element.logo, element.title, element.name, element.date, element.description, element.street, element.city, element.state, element.zip)
+        availableAccumulator += availEvents(element.id, id, element.logo, element.title, element.name, moment(element.date).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip)
       })
       document.getElementById('available-events').innerHTML = availableAccumulator
       const interestedButtons = document.querySelectorAll('.interested')
@@ -72,11 +73,11 @@ function allEvents(){
 
       let upcomingAccumulator = ''
 
-      upcomingEvents.forEach(element => upcomingAccumulator += rsvpEvents(element.id, infoOrg.id, element.logo, element.title, element.name, new Date(element.date), element.description, element.street, element.city, element.state, element.zip))
+      upcomingEvents.forEach(element => upcomingAccumulator += rsvpEvents(element.id, infoOrg.id, element.logo, element.title, element.name, moment(new Date(element.date)).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip))
 
       let pastAccumulator = ''
 
-      pastEvents.forEach(element => pastAccumulator += rsvpEvents(element.id, infoOrg.id, element.logo, element.title, element.name, new Date(element.date), element.description, element.street, element.city, element.state, element.zip))
+      pastEvents.forEach(element => pastAccumulator += rsvpEvents(element.id, infoOrg.id, element.logo, element.title, element.name, moment(new Date(element.date)).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip))
 
       document.getElementById('upcoming-events').innerHTML = upcomingAccumulator
       document.getElementById('past-events').innerHTML = pastAccumulator
