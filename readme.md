@@ -34,4 +34,4 @@ To install & run locally for development:
 * npm run build-org
 * npm run build-vol
 
-![Home Page](assets/backgrounds/homepageP.PNG)
+![Home Page](assets/home.PNG)
