@@ -38,11 +38,11 @@ function verify(event) {
       days: daysArray,
       interests: response.data.interests
     }
+
     localStorage.setItem('info_vol', JSON.stringify(info))
 
     loginMode()
     allEvents()
-
 
   }).catch(error => {
     renderError(error)

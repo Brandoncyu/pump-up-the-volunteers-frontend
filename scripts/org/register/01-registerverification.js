@@ -28,6 +28,7 @@ function verify(event) {
     localStorage.setItem('info_org', JSON.stringify(info))
 
     loginMode()
+    
   }).catch(error => {
     renderError(error)
   })

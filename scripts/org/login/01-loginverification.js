@@ -19,6 +19,7 @@ function verify(event) {
       state: response.data.state,
       zip: response.data.zip
     }
+    
     localStorage.setItem('info_org', JSON.stringify(info))
 
     loginMode()
