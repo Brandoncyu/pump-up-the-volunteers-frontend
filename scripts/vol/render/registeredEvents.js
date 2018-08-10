@@ -9,7 +9,6 @@ function registeredEvents(){
   const days = infoOrg.days
   const interests = infoOrg.interests
   const id = infoOrg.id
-  console.log(id)
 
   request.eventLoad(days, interests, id)
   .then(response => {
@@ -25,7 +24,6 @@ function registeredEvents(){
       }
     })
     const newId = JSON.parse(localStorage.getItem('info_vol')).id
-    console.log(newId)
     events.forEach(element => {
       availableAccumulator += availEvents(element.id, newId, element.logo, element.title, element.name, element.date, element.description, element.street, element.city, element.state, element.zip)
     })

@@ -5,7 +5,6 @@ function interested(element){
     const eventId = element.getAttribute('eventid')
     const volId = element.getAttribute('volid')
     const status = true
-    console.log(eventId, volId, status)
     request.createFavorite(eventId, volId, status)
     .then(response => {
       allEvents()

@@ -61,7 +61,6 @@ function verify(event) {
     if (daysParse[6] == true) {
       daysArray.push('Saturday')
     }
-    console.log(response.data)
     const info = {
       id: response.data.id,
       days: daysArray,

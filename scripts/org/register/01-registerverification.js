@@ -4,7 +4,6 @@ const loginMode = require('../modes/loginMode')
 
 function verify(event) {
   event.preventDefault()
-  console.log('hey')
   const email = document.getElementById('register-email').value.toLowerCase()
   const password = document.getElementById('register-password').value
   const name = document.getElementById('register-name').value
