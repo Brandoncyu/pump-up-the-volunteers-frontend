@@ -1,5 +1,5 @@
 const loginTemplate = require('../templates/loginTemplate')
-const verify = require('./01-loginVerification')
+const verify = require('./01-loginverification')
 
 function loginForm() {
   document.getElementById('form-container').innerHTML = loginTemplate()
