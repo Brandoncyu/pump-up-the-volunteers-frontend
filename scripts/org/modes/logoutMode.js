@@ -1,5 +1,5 @@
 const loginTemplate = require('../templates/loginTemplate')
-const verify = require('../login/01-loginVerification')
+const verify = require('../login/01-loginverification')
 
 function logoutMode() {
   localStorage.removeItem('token_org')
