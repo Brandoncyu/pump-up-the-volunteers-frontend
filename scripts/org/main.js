@@ -7,7 +7,7 @@ const eventFormAddress = require('./render/eventFormAddress')
 const allEvents = require('./render/allEvents')
 const newEvents = require('./render/newEvents')
 
-window.baseURL = `http://localhost:5000`
+window.baseURL = `https://rocky-hollows-96643.herokuapp.com`
 
 if (localStorage.getItem('token_org') !== null) {
   loginMode()

@@ -5,7 +5,7 @@ const verify = require('./login/01-loginverification')
 const loginMode = require('./modes/loginMode')
 const allEvents = require('./render/allEvents')
 
-window.baseURL = `http://localhost:5000`
+window.baseURL = `https://rocky-hollows-96643.herokuapp.com`
 
 if (localStorage.getItem('token_vol') !== null) {
   loginMode()
