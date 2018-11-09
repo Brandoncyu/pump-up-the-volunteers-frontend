@@ -30,13 +30,13 @@ function allEvents() {
     })
     let upcomingAccumulator = ''
 
-    upcomingEvents.forEach(element => upcomingAccumulator += cardOrgTemplate(element.id, infoOrg.logo, element.title, moment(new Date(element.date)).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip))
+    upcomingEvents.forEach(newEvent => upcomingAccumulator += cardOrgTemplate(newEvent.id, infoOrg.logo, newEvent.title, moment(new Date(newEvent.date)).format('MMMM Do YYYY'), newEvent.description, newEvent.street, newEvent.city, newEvent.state, newEvent.zip))
 
     document.getElementById('upcoming-events').innerHTML = upcomingAccumulator
 
     let pastAccumulator = ''
 
-    pastEvents.forEach(element => pastAccumulator += cardOrgTemplate(element.id, infoOrg.logo, element.title, moment(new Date(element.date)).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip))
+    pastEvents.forEach(newEvent => pastAccumulator += cardOrgTemplate(newEvent.id, infoOrg.logo, newEvent.title, moment(new Date(newEvent.date)).format('MMMM Do YYYY'), newEvent.description, newEvent.street, newEvent.city, newEvent.state, newEvent.zip))
 
     document.getElementById('past-events').innerHTML = pastAccumulator
   }).catch(error => {
