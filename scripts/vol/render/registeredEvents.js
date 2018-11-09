@@ -24,21 +24,21 @@ function registeredEvents(){
       }
     })
     const newId = JSON.parse(localStorage.getItem('info_vol')).id
-    events.forEach(element => {
-      availableAccumulator += availEvents(element.id, newId, element.logo, element.title, element.name, moment(element.date).format('MMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip)
+    events.forEach(event => {
+      availableAccumulator += availEvents(event.id, newId, event.logo, event.title, event.name, moment(event.date).format('MMM Do YYYY'), event.description, event.street, event.city, event.state, event.zip)
     })
 
     document.getElementById('available-events').innerHTML = availableAccumulator
     const interestedButtons = document.querySelectorAll('.interested')
 
-    interestedButtons.forEach(element => {
-      element.addEventListener('click', interested(element))
+    interestedButtons.forEach(interestedButton => {
+      interestedButton.addEventListener('click', interested(interestedButton))
     })
 
     const notInterestedButtons = document.querySelectorAll('.not-interested')
 
-    notInterestedButtons.forEach(element => {
-      element.addEventListener('click', notInterested(element))
+    notInterestedButtons.forEach(notInterestedButton => {
+      notInterestedButton.addEventListener('click', notInterested(notInterestedButton))
     })
   })
 }

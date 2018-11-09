@@ -6,16 +6,6 @@
   margin-right: 20px
 }
 
-.scrolling-wrapper {
-  overflow-x: scroll;
-  overflow-y: hidden;
-  width: 900px;
-  height: 450px;
-  .card {
-    display: inline-block;
-  }
-}
-
 .card-top {
   margin-left: auto;
   margin-right: auto;

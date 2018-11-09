@@ -31,53 +31,52 @@ function allEvents(){
       const RSVP = []
       const noRSVP = []
 
-      events.forEach(element => {
-        if (eventIdArray.includes(element.id)){
-          let statusFinder = registeredEvents.find(el=> element.id == el.event_id).status
-          element.status = statusFinder
-          RSVP.push(element)
+      events.forEach(event => {
+        if (eventIdArray.includes(event.id)){
+          let statusFinder = registeredEvents.find(el=> event.id == el.event_id).status
+          event.status = statusFinder
+          RSVP.push(event)
         } else{
-          noRSVP.push(element)
+          noRSVP.push(event)
         }
       })
 
-      noRSVP.forEach(element => {
-        availableAccumulator += availEvents(element.id, id, element.logo, element.title, element.name, moment(element.date).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip)
+      noRSVP.forEach(event => {
+        availableAccumulator += availEvents(event.id, id, event.logo, event.title, event.name, moment(event.date).format('MMMM Do YYYY'), event.description, event.street, event.city, event.state, event.zip)
       })
       document.getElementById('available-events').innerHTML = availableAccumulator
       const interestedButtons = document.querySelectorAll('.interested')
 
-      interestedButtons.forEach(element => {
-        element.addEventListener('click', interested(element))
+      interestedButtons.forEach(interestedButton => {
+        interestedButton.addEventListener('click', interested(interestedButton))
       })
 
       const notInterestedButtons = document.querySelectorAll('.not-interested')
 
-      notInterestedButtons.forEach(element => {
-        element.addEventListener('click', notInterested(element))
+      notInterestedButtons.forEach(notInterestedButton => {
+        notInterestedButton.addEventListener('click', notInterested(notInterestedButton))
       })
 
       const upcomingEvents = []
       const pastEvents = []
       const today = new Date()
 
-      let trueRSVP = RSVP.filter(element => element.status == true)
-      trueRSVP.forEach(element => {
-        if (today <= new Date(element.date)) {
-          upcomingEvents.push(element)
-
+      let trueRSVP = RSVP.filter(event => event.status == true)
+      trueRSVP.forEach(event => {
+        if (today <= new Date(event.date)) {
+          upcomingEvents.push(event)
         } else {
-          pastEvents.push(element)
+          pastEvents.push(event)
         }
       })
 
       let upcomingAccumulator = ''
 
-      upcomingEvents.forEach(element => upcomingAccumulator += rsvpEvents(element.id, infoOrg.id, element.logo, element.title, element.name, moment(new Date(element.date)).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip))
+      upcomingEvents.forEach(event => upcomingAccumulator += rsvpEvents(event.id, infoOrg.id, event.logo, event.title, event.name, moment(new Date(event.date)).format('MMMM Do YYYY'), event.description, event.street, event.city, event.state, event.zip))
 
       let pastAccumulator = ''
 
-      pastEvents.forEach(element => pastAccumulator += rsvpEvents(element.id, infoOrg.id, element.logo, element.title, element.name, moment(new Date(element.date)).format('MMMM Do YYYY'), element.description, element.street, element.city, element.state, element.zip))
+      pastEvents.forEach(event => pastAccumulator += rsvpEvents(event.id, infoOrg.id, event.logo, event.title, event.name, moment(new Date(event.date)).format('MMMM Do YYYY'), event.description, event.street, event.city, event.state, event.zip))
 
       document.getElementById('upcoming-events').innerHTML = upcomingAccumulator
       document.getElementById('past-events').innerHTML = pastAccumulator
