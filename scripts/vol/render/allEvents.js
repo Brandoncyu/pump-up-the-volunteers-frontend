@@ -13,7 +13,7 @@ function allEvents(){
   request.signedUp(id)
   .then(res => {
     const registeredEvents = res.data.events
-    const eventIdArray = registeredEvents.map(element => element.event_id)
+    const eventIdArray = registeredEvents.map(event => event.event_id)
 
     request.eventLoad(days, interests, id).then(response => {
       let availableAccumulator = ''
@@ -31,18 +31,18 @@ function allEvents(){
       const RSVP = []
       const noRSVP = []
 
-      events.forEach(event => {
-        if (eventIdArray.includes(event.id)){
-          let statusFinder = registeredEvents.find(el=> event.id == el.event_id).status
-          event.status = statusFinder
-          RSVP.push(event)
+      events.forEach(newEvent => {
+        if (eventIdArray.includes(newEvent.id)){
+          let statusFinder = registeredEvents.find(el=> newEvent.id == el.event_id).status
+          newEvent.status = statusFinder
+          RSVP.push(newEvent)
         } else{
-          noRSVP.push(event)
+          noRSVP.push(newEvent)
         }
       })
 
-      noRSVP.forEach(event => {
-        availableAccumulator += availEvents(event.id, id, event.logo, event.title, event.name, moment(event.date).format('MMMM Do YYYY'), event.description, event.street, event.city, event.state, event.zip)
+      noRSVP.forEach(newEvent => {
+        availableAccumulator += availEvents(newEvent.id, id, newEvent.logo, newEvent.title, newEvent.name, moment(newEvent.date).format('MMMM Do YYYY'), newEvent.description, newEvent.street, newEvent.city, newEvent.state, newEvent.zip)
       })
       document.getElementById('available-events').innerHTML = availableAccumulator
       const interestedButtons = document.querySelectorAll('.interested')
@@ -61,22 +61,22 @@ function allEvents(){
       const pastEvents = []
       const today = new Date()
 
-      let trueRSVP = RSVP.filter(event => event.status == true)
-      trueRSVP.forEach(event => {
-        if (today <= new Date(event.date)) {
-          upcomingEvents.push(event)
+      let trueRSVP = RSVP.filter(newEvent => newEvent.status == true)
+      trueRSVP.forEach(newEvent => {
+        if (today <= new Date(newEvent.date)) {
+          upcomingEvents.push(newEvent)
         } else {
-          pastEvents.push(event)
+          pastEvents.push(newEvent)
         }
       })
 
       let upcomingAccumulator = ''
 
-      upcomingEvents.forEach(event => upcomingAccumulator += rsvpEvents(event.id, infoOrg.id, event.logo, event.title, event.name, moment(new Date(event.date)).format('MMMM Do YYYY'), event.description, event.street, event.city, event.state, event.zip))
+      upcomingEvents.forEach(newEvent => upcomingAccumulator += rsvpEvents(newEvent.id, infoOrg.id, newEvent.logo, newEvent.title, newEvent.name, moment(new Date(newEvent.date)).format('MMMM Do YYYY'), newEvent.description, newEvent.street, newEvent.city, newEvent.state, newEvent.zip))
 
       let pastAccumulator = ''
 
-      pastEvents.forEach(event => pastAccumulator += rsvpEvents(event.id, infoOrg.id, event.logo, event.title, event.name, moment(new Date(event.date)).format('MMMM Do YYYY'), event.description, event.street, event.city, event.state, event.zip))
+      pastEvents.forEach(newEvent => pastAccumulator += rsvpEvents(newEvent.id, infoOrg.id, newEvent.logo, newEvent.title, newEvent.name, moment(new Date(newEvent.date)).format('MMMM Do YYYY'), newEvent.description, newEvent.street, newEvent.city, newEvent.state, newEvent.zip))
 
       document.getElementById('upcoming-events').innerHTML = upcomingAccumulator
       document.getElementById('past-events').innerHTML = pastAccumulator

@@ -24,8 +24,8 @@ function registeredEvents(){
       }
     })
     const newId = JSON.parse(localStorage.getItem('info_vol')).id
-    events.forEach(event => {
-      availableAccumulator += availEvents(event.id, newId, event.logo, event.title, event.name, moment(event.date).format('MMM Do YYYY'), event.description, event.street, event.city, event.state, event.zip)
+    events.forEach(newEvent => {
+      availableAccumulator += availEvents(newEvent.id, newId, newEvent.logo, newEvent.title, newEvent.name, moment(newEvent.date).format('MMM Do YYYY'), newEvent.description, newEvent.street, newEvent.city, newEvent.state, newEvent.zip)
     })
 
     document.getElementById('available-events').innerHTML = availableAccumulator
